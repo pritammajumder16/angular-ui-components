@@ -5,6 +5,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { ButtonComponent } from './button/button.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,4 +20,5 @@ export const routes: Routes = [
     path: 'card',
     component: CardComponent,
   },
+  { path: 'carousel', component: CarouselComponent },
 ];

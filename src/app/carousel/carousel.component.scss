@@ -1,0 +1,97 @@
+$primary-color: #00ccbb;
+$secondary-color: #15202b;
+$transition-duration: 0.5s;
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  .carousel-inner {
+    display: flex;
+    transition: transform $transition-duration ease;
+  }
+  .carousel-item {
+    min-width: 100%;
+    transition: opacity $transition-duration ease;
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 1;
+    span {
+      padding: 0 0 0 1rem;
+    }
+    .right-control {
+      padding: 0px 0px 0.25rem 0.25rem;
+    }
+    .left-control {
+      padding: 0px 0.1rem 0.25rem 0;
+    }
+    &.prev {
+      left: 10px;
+    }
+
+    &.next {
+      right: 10px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+
+    span {
+      display: block;
+
+      max-height: 10px;
+      max-width: 10px;
+      min-height: 10px;
+      min-width: 10px;
+      background-color: $secondary-color;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color $transition-duration ease;
+
+      &.active {
+        background-color: $primary-color;
+      }
+
+      &:hover {
+        background-color: lighten($secondary-color, 15%);
+      }
+    }
+  }
+}
