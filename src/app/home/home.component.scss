@@ -7,8 +7,7 @@
   margin: 0rem 5rem;
   .uiContentsBox {
     cursor: pointer;
-    transition: all;
-    transition-duration: 300ms;
+    transition: background-color 0.3s ease;
     border-bottom: 4px solid #ffa500;
     padding: 0.5rem;
     .itemLabel {
@@ -17,6 +16,8 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      color: black;
+      text-decoration: none;
       font-size: medium;
     }
     .indicator {

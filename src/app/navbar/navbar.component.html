@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">LOGO</a>
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/">About</a></li>
+      <li><a routerLink="/">Services</a></li>
+      <li><a routerLink="/">Contact</a></li>
+    </ul>
+    <div class="cta">
+      <a routerLink="/" class="btn-primary">Get Started</a>
+    </div>
+    <div class="hamburger" (click)="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<ul [class.active]="isNavOpen" class="mobile-nav">
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/">About</a></li>
+  <li><a routerLink="/">Services</a></li>
+  <li><a routerLink="/">Contact</a></li>
+</ul>
