@@ -1,0 +1,8 @@
+<h1 class="header">UI Components</h1>
+<div class="uiContentOuterBox">
+  <div *ngFor="let item of items; index as i" class="uiContentsBox">
+    <span class="itemLabel">
+      <span class="indicator">{{ i + 1 }}.</span> {{ item.label }}</span
+    >
+  </div>
+</div>

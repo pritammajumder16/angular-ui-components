@@ -1,0 +1,30 @@
+.uiContentOuterBox {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 15rem);
+  column-gap: 5rem;
+  row-gap: 1rem;
+  margin: 0rem 5rem;
+  .uiContentsBox {
+    cursor: pointer;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 4px solid #ffa500;
+    padding: 0.5rem;
+    .itemLabel {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: medium;
+    }
+    .indicator {
+      font-size: x-large;
+      font-weight: 600;
+    }
+  }
+  :hover {
+    background: #f5f5dc;
+  }
+}
