@@ -1,0 +1,69 @@
+$primary-color: #00ccbb;
+$secondary-color: #15202b;
+$font-color: #ffffff;
+$border-radius: 50px;
+$transition-duration: 0.3s;
+.outerbody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  border-radius: $border-radius;
+  border: none;
+  transition: background-color $transition-duration ease,
+    box-shadow $transition-duration ease, transform $transition-duration ease;
+  outline: none;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.5);
+  }
+
+  &.btn-primary {
+    background-color: $primary-color;
+    color: $font-color;
+    box-shadow: 0 4px 8px rgba(0, 204, 187, 0.2);
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      box-shadow: 0 6px 12px rgba(0, 204, 187, 0.3);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $secondary-color;
+    color: $font-color;
+    box-shadow: 0 4px 8px rgba(21, 32, 43, 0.2);
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      box-shadow: 0 6px 12px rgba(21, 32, 43, 0.3);
+    }
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $font-color;
+    }
+  }
+}
