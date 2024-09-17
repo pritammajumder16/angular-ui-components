@@ -1,0 +1,52 @@
+$primary-color: #00ccbb;
+$secondary-color: #15202b;
+$font-color: #333;
+$separator-color: #ccc;
+$breadcrumb-spacing: 0.5rem;
+
+.breadcrumb {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 1rem;
+      color: $font-color;
+
+      &::after {
+        content: "/";
+        color: $separator-color;
+        padding: 0 $breadcrumb-spacing;
+      }
+
+      &:last-child::after {
+        content: "";
+      }
+
+      &.active {
+        color: $secondary-color;
+        font-weight: bold;
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
