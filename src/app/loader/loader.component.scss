@@ -1,0 +1,27 @@
+$primary-color: #00ccbb;
+$background-color: #15202b;
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  .loader {
+    border: 8px solid rgba($primary-color, 0.2);
+    border-radius: 50%;
+    border-top: 8px solid $primary-color;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
