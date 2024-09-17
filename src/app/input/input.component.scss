@@ -1,0 +1,54 @@
+$primary-color: #00ccbb;
+$border-color: #ccc;
+$focus-border-color: #00ccbb;
+$label-color: #666;
+$placeholder-color: #aaa;
+
+.input-container {
+  position: relative;
+  margin: 1rem;
+  width: 100%;
+  max-width: 400px;
+
+  .input-field {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid $border-color;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: $label-color;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      border-color: $focus-border-color;
+      outline: none;
+      box-shadow: 0 0 8px rgba($focus-border-color, 0.3);
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+
+    &:not(:placeholder-shown) + .input-label,
+    &:focus + .input-label {
+      top: -0.75rem;
+      left: 0.75rem;
+      font-size: 0.75rem;
+      color: $primary-color;
+    }
+  }
+
+  .input-label {
+    position: absolute;
+    top: 35%;
+    left: 1rem;
+    // bottom: 1rem;
+    font-size: 1rem;
+    color: $label-color;
+    pointer-events: none;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    // background-color: #fff;
+    padding: 0 0.25rem;
+  }
+}

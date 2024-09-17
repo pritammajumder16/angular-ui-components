@@ -7,6 +7,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { CardComponent } from './card/card.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { InputComponent } from './input/input.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,4 +24,5 @@ export const routes: Routes = [
   },
   { path: 'carousel', component: CarouselComponent },
   { path: 'checkbox', component: CheckboxComponent },
+  { path: 'input', component: InputComponent },
 ];
